@@ -39,7 +39,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|references|null: false, foreign_key: true|
+|name|string|null: false|
 
 
 ### Association
@@ -52,7 +52,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|references|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :groups, through: :groups_users
@@ -66,6 +66,9 @@ Things you may want to cover:
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
+|text|string|null: false|
+|image|string|null: false|
+
 
 ### Association
 - belongs_to :user
