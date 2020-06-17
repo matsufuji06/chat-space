@@ -1,17 +1,18 @@
 .side-bar  
-
   .side-bar__user-name
     .top-items
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "top-items__btn" do
+        = link_to new_group_path, class: "top-items__btn" do
           = icon('far', 'edit')
-        = link_to edit_user_path(current_user), class: "top-items__btn" do
+        = link_to edit_user_path(current_user.id), class: "top-items__btn" do
           = icon('fas', 'cog')
   .side-bar__group-list
-    .buttom-items
-      .buttom-items__group-name
-        tech::camp
-      .buttom-items__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .buttom-items
+        = link_to '#' do
+          .buttom-items__group-name
+            = group.name
+          .buttom-items__message
+            まだメッセージがありません
