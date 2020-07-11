@@ -44,7 +44,6 @@ $(function(){
 $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
-  console.log(this)
   var url = $(this).attr('action')
  
   $.ajax({
@@ -56,7 +55,6 @@ $('#new_message').on('submit', function(e){
     contentType: false
   })
   .done(function(data){
-    console.log(data)
     var html = buildHTML(data);
     $('.chat-main__message').append(html);
     $('.chat-main__message').animate({ scrollTop: $('.chat-main__message')[0].scrollHeight});
@@ -78,7 +76,6 @@ $('#new_message').on('submit', function(e){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages)
       if (messages.length !== 0 ) {
         var insertHTML = '';
         $.each(messages, function(i, message) {
