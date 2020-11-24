@@ -1,66 +1,60 @@
-# README
+## 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
 
-Things you may want to cover:
+## 機能一覧 
 
-* Ruby version
+## 技術一覧
+・Ruby  
+・Ruby on Rails  
+・haml  
+・scss  
+・JavaScriptによる非同期通信  
+・Github  
+・AWS(EC2) 
 
-* System dependencies
+## アプリへの想い
 
-* Configuration
+## DB設計
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-## groups_usersテーブル
+### groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :group
 - belongs_to :user
 
 
-## groupsテーブル
+### groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
 
-### Association
+#### Association
 - has_many :users, through: :groups_users
 - has_many :groups_users
 - has_many :messages
 
 
-## usersテーブル
+### usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
-### Association
+#### Association
 - has_many :groups, through: :groups_users
 - has_many :groups_users
 - has_many :messages
 
 
-## messagesテーブル
+### messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -70,6 +64,6 @@ Things you may want to cover:
 |image|string|
 
 
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :group
