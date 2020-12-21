@@ -5,13 +5,13 @@
 ## 機能一覧 
 
 ## 技術一覧
-・Ruby  
-・Ruby on Rails  
-・haml  
-・scss  
-・JavaScriptによる非同期通信  
-・Github  
-・AWS(EC2) 
+- Ruby  
+- Ruby on Rails  
+- haml  
+- scss  
+- JavaScriptによる非同期通信  
+- Github  
+- AWS(EC2) 
 
 ## アプリへの想い
 
